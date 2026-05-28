@@ -1,0 +1,92 @@
+:root {
+    --primary: #f39c12;
+    --secondary: #2c3e50;
+    --white: #ffffff;
+    --whatsapp: #25d366;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 5%;
+    background: rgba(255, 255, 255, 0.9);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo { font-weight: bold; font-size: 1.5rem; color: var(--secondary); }
+.logo span { color: var(--primary); }
+
+.hero {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: url('https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=2070') center/cover;
+    color: white;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.4);
+}
+
+.hero-content { position: relative; z-index: 1; }
+
+.cta-btn {
+    background: var(--primary);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+.cta-btn:hover { transform: scale(1.1); }
+
+/* Floating Buttons */
+.floating-contact {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 2000;
+}
+
+.wa-float, .call-float {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.wa-float { background: var(--whatsapp); }
+.call-float { background: #3498db; }
+
+/* Responsive Form */
+.contact-section { padding: 50px 10%; text-align: center; }
+form { display: flex; flex-direction: column; max-width: 500px; margin: auto; gap: 15px; }
+input, select, button { padding: 12px; border-radius: 5px; border: 1px solid #ddd; }
+button { background: var(--secondary); color: white; cursor: pointer; }

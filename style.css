@@ -22,6 +22,87 @@ nav {
     top: 0;
     z-index: 1000;
 }
+.page-header {
+    background: var(--secondary);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.mission-grid, .services-detail {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.card, .service-box {
+    flex: 1;
+    min-width: 300px;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.contact-info {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Process Styling */
+.process-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 50px 10%;
+}
+
+.step {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.step:hover { transform: translateY(-10px); }
+
+.step-num {
+    font-size: 3rem;
+    font-weight: 800;
+    color: rgba(243, 156, 18, 0.2);
+    margin-bottom: -20px;
+}
+
+/* Testimonials Styling */
+.testimonials-grid {
+    padding: 50px 10%;
+    display: grid;
+    gap: 20px;
+}
+
+.testi-card {
+    background: white;
+    padding: 30px;
+    border-left: 5px solid var(--primary);
+    border-radius: 10px;
+    font-style: italic;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.testi-card h4 {
+    margin-top: 15px;
+    font-style: normal;
+    color: var(--secondary);
+}
 
 .logo { font-weight: bold; font-size: 1.5rem; color: var(--secondary); }
 .logo span { color: var(--primary); }
